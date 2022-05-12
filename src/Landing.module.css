@@ -1,0 +1,12 @@
+.landing {
+  background-color: blueviolet;
+  padding: 0.5rem;
+}
+.link {
+  text-decoration: none;
+  margin: 0.5rem;
+  color: white;
+}
+.link:hover {
+  text-decoration: underline;
+}

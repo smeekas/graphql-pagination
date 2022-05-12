@@ -1,0 +1,26 @@
+.pagination{
+
+    position: sticky;
+    bottom: 0;
+    padding: 0.5rem;
+    /* background-color: red; */
+}
+button{
+    outline: none;
+    border: none;
+    margin: 0 0.2rem;
+    padding: 0.5rem;
+    background-color: white;
+    color: #1a6ae0;
+    border: 1px solid #1a6ae0;
+    border-radius: 4px;
+}
+button:hover{
+    cursor: pointer;
+    color: white;
+    background-color: #1a6ae0;
+}
+.current{
+    color: white;
+    background-color: #1a6ae0;
+}
