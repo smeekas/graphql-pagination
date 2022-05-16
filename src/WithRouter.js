@@ -25,10 +25,7 @@ function WithRouter() {
   const { data, loading, error, refetch } = useQuery(GET_DATA, {
     variables: {
       page:currPage,
-    },
-    onCompleted: (completed) => {
-
-    },
+    }
   });
   console.log(data);
   if (loading) {

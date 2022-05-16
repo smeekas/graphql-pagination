@@ -13,7 +13,7 @@ function RouterPagination({ pagination }) {
           ...
         </>
       )}
-      {pagination.prev !== -1 && (
+      {pagination.prev !== -1 && pagination.prev!==0 && (
         <Link to={`/withrouter/${pagination.prev}`}>
           <button>{pagination.prev}</button>
         </Link>
