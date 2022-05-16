@@ -8,3 +8,4 @@ function Character({ character: data }) {
   );
 }
 export default Character;
+ 
