@@ -1,5 +1,5 @@
 import { gql, useQuery } from "@apollo/client";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import AllCharacters from "./components/AllCharacters";
 import RouterPagination from "./components/RouterPagination";
 const GET_DATA = gql`
@@ -22,7 +22,7 @@ const GET_DATA = gql`
 function WithRouter() {
   const { page } = useParams();
   const currPage=Number(page)
-  const { data, loading, error, refetch } = useQuery(GET_DATA, {
+  const { data, loading } = useQuery(GET_DATA, {
     variables: {
       page:currPage,
     }

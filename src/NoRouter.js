@@ -29,7 +29,7 @@ function NoRouter() {
     pages: 42,
   });
   const [load, setLoad] = useState(true);
-  const { data, loading, refetch } = useQuery(GET_DATA, {
+  const { data, refetch } = useQuery(GET_DATA, {
     onCompleted: (completed) => {
       console.log({ ...completed.characters.info });
       setLoad(false);
