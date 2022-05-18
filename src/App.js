@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" index element={<Landing />} />
+        <Route path="/" index element={<div></div>} />
         <Route path="/norouter" element={<NoRouter />} />
         <Route path="/withrouter" element={<Navigate to="/withrouter/1" />} />
         <Route path="/withrouter/:page" element={<WithRouter />} />

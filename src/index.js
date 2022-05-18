@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 import { BrowserRouter } from "react-router-dom";
+import Landing from "./Landing";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const client = new ApolloClient({
@@ -14,6 +15,7 @@ root.render(
   <React.StrictMode>
     <ApolloProvider client={client}>
       <BrowserRouter>
+      <Landing/>
         <App />
       </BrowserRouter>
     </ApolloProvider>

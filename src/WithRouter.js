@@ -21,20 +21,21 @@ const GET_DATA = gql`
 `;
 function WithRouter() {
   const { page } = useParams();
-  const currPage=Number(page)
+  const currPage = Number(page);
   const { data, loading } = useQuery(GET_DATA, {
     variables: {
-      page:currPage,
-    }
+      page: currPage,
+    },
   });
   console.log(data);
-  if (loading) {
-    return <h2>Loading...</h2>;
-  }
+
   return (
     <>
-      <AllCharacters data={data.characters.results} />
-
+      {loading ? (
+        <h2>Loading....</h2>
+      ) : (
+        <AllCharacters data={data.characters.results} />
+      )}
       <RouterPagination
         pagination={{ curr: currPage, next: currPage + 1, prev: currPage - 1 }}
       />
